@@ -23,7 +23,7 @@ public class BaseConfig {
 	
 	@Parameters({"browser"})
 	@BeforeClass
-	public void browserSetup(@Optional("edge") String browser) throws IOException
+	public void browserSetup(@Optional("chrome") String browser) throws IOException
 	{
 		if(browser.equals("chrome"))
 		{
