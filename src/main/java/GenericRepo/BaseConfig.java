@@ -27,7 +27,10 @@ public class BaseConfig {
 	{
 		if(browser.equals("chrome"))
 		{
-			driver=new ChromeDriver();
+			ChromeOptions options=new ChromeOptions();
+			options.addArguments("--headless");
+			driver=new ChromeDriver(options);
+			//driver=new ChromeDriver();
 			Reporter.log("Browser verified",true);
 			Reporter.log("Opening "+browser,true);
 		}
